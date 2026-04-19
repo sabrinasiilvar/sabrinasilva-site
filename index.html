@@ -230,29 +230,26 @@
     }
 
     /* ── Competências ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+    .skills-grid { list-style: none; }
 
     .skill-item {
-      padding: 18px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 11px 0;
       border-bottom: 1px solid var(--border);
     }
 
-    .skill-item:nth-child(odd)  { padding-right: 32px; border-right: 1px solid var(--border); }
-    .skill-item:nth-child(even) { padding-left: 32px; }
-
-    .skill-item:last-child,
-    .skill-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+    .skill-item:first-child { border-top: 1px solid var(--border); }
+    .skill-item:last-child  { border-bottom: none; }
 
     .skill-category {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
       color: var(--muted);
-      margin-bottom: 8px;
+      white-space: nowrap;
+      min-width: 110px;
+      flex-shrink: 0;
     }
 
     .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -260,7 +257,7 @@
     .tag {
       font-size: 0.78rem;
       border: 1px solid var(--border);
-      padding: 3px 9px;
+      padding: 2px 8px;
       border-radius: 4px;
     }
 
@@ -408,7 +405,7 @@
     <!-- Experiência -->
     <section id="experiencia">
       <div class="container">
-        <p class="section-label">Experiência</p>
+        <p class="section-label">Experiência Profissional</p>
         <ul class="exp-list">
           <li>
             <div>
@@ -430,53 +427,47 @@
     <section id="competencias">
       <div class="container">
         <p class="section-label">Competências</p>
-        <div class="skills-grid">
-
-          <div class="skill-item">
-            <p class="skill-category">Testes</p>
+        <ul class="skills-grid">
+          <li class="skill-item">
+            <span class="skill-category">Testes</span>
             <div class="skill-tags">
               <span class="tag">Manuais</span>
               <span class="tag">Funcionais</span>
               <span class="tag">API</span>
               <span class="tag">Web</span>
             </div>
-          </div>
-
-          <div class="skill-item">
-            <p class="skill-category">Automação</p>
+          </li>
+          <li class="skill-item">
+            <span class="skill-category">Automação</span>
             <div class="skill-tags">
               <span class="tag">Cypress</span>
               <span class="tag">Playwright</span>
               <span class="tag">Appium</span>
             </div>
-          </div>
-
-          <div class="skill-item">
-            <p class="skill-category">API</p>
+          </li>
+          <li class="skill-item">
+            <span class="skill-category">API</span>
             <div class="skill-tags">
               <span class="tag">Postman</span>
             </div>
-          </div>
-
-          <div class="skill-item">
-            <p class="skill-category">Linguagens Web</p>
+          </li>
+          <li class="skill-item">
+            <span class="skill-category">Linguagens Web</span>
             <div class="skill-tags">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
               <span class="tag">JavaScript</span>
             </div>
-          </div>
-
-          <div class="skill-item">
-            <p class="skill-category">Gestão</p>
+          </li>
+          <li class="skill-item">
+            <span class="skill-category">Gestão</span>
             <div class="skill-tags">
               <span class="tag">Jira</span>
               <span class="tag">Azure DevOps</span>
               <span class="tag">Trello</span>
             </div>
-          </div>
-
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
